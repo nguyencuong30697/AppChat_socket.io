@@ -7,11 +7,11 @@ const addUser= ({id, name, room})=>{
     room = room.trim().toLowerCase();
 
     // kiem tra xem trong mang users da co user voi ten nhu vay chua
-    const existingUser = users.find((user) => user.room === room && user.name === name);
+    // const existingUser = users.find((user) => user.room === room && user.name === name);
     if(!name || !room) return { error: 'Username and room are required.' };
-    if(existingUser){
-        return { error : 'Username is taken ( ton tai )'};
-    }
+    // if(existingUser){
+    //     return { error : 'Username is taken ( ton tai )'};
+    // }
 
     const user = {id, name, room};
     users.push(user);
